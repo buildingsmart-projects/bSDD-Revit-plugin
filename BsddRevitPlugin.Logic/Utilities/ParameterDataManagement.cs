@@ -181,11 +181,11 @@ namespace BsddRevitPlugin.Logic.Utilities
 
                         if (_propertyIsInstanceMap.ContainsKey(propertyName))
                         {
-                             isInstance = _propertyIsInstanceMap.TryGetValue(propertyName, out bool valueExists);
+                             _propertyIsInstanceMap.TryGetValue(propertyName, out isInstance);
                         }
                         else if (_propertyIsInstanceMap.ContainsKey(propertySetPropertyName))
                         {
-                            isInstance = _propertyIsInstanceMap.TryGetValue(propertySetPropertyName, out bool valueExists);
+                            _propertyIsInstanceMap.TryGetValue(propertySetPropertyName, out isInstance);
                         }
 
                         bsddParameterName = CreateParameterNameFromPropertySetAndProperty(propertySet.Name, property);
